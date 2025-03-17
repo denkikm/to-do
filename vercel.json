@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": {
+    "POSTGRES_USER": "todoapp",
+    "POSTGRES_PASSWORD": "todoapp123",
+    "POSTGRES_DB": "tododb"
+  }
+} 

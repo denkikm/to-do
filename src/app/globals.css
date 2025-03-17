@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Vazirmatn, system-ui, sans-serif;
+  }
+}
+
+/* Cat Mode Styles */
+.cat-mode {
+  --cat-primary: #FFB7C5;  /* پینک پاستلی */
+  --cat-secondary: #FFF0F5; /* صورتی روشن */
+  --cat-accent: #FF69B4;    /* صورتی پررنگ */
+  --cat-paw: #FFC0CB;      /* رنگ پنجه گربه */
+}
+
+.cat-mode .todo-card {
+  background: var(--cat-secondary);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 183, 197, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cat-mode .todo-card::before {
+  content: "🐾";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.5rem;
+  transform: rotate(-30deg);
+}
+
+.cat-mode .todo-card:hover {
+  transform: translateY(-3px) rotate(1deg);
+}
+
+.cat-mode .button-primary {
+  background: var(--cat-primary);
+  border-radius: 25px;
+  padding: 8px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-mode .button-primary:hover::after {
+  content: "😺";
+  position: absolute;
+  right: 10px;
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.cat-mode .todo-input {
+  border: 2px solid var(--cat-primary);
+  border-radius: 20px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.cat-mode .todo-input:focus {
+  border-color: var(--cat-accent);
+  box-shadow: 0 0 0 3px rgba(255, 183, 197, 0.3);
+}
+
+.cat-mode .completed-task {
+  text-decoration: line-through;
+  color: var(--cat-primary);
+}
+
+/* Cat Ears Header */
+.cat-mode .header {
+  position: relative;
+}
+
+.cat-mode .header::before,
+.cat-mode .header::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  background: var(--cat-primary);
+  border-radius: 50% 50% 0 0;
+}
+
+.cat-mode .header::before {
+  left: 20px;
+  transform: rotate(-30deg);
+}
+
+.cat-mode .header::after {
+  right: 20px;
+  transform: rotate(30deg);
+}

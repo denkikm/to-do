@@ -7,6 +7,6 @@
   "env": {
     "MONGODB_URI": "mongodb+srv://parhamkmbta:NrsbbxCirrSlQzRP@cluster0.lwghd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     "NEXTAUTH_SECRET": "c8e3e306237b4c9ab324f99e86876e42",
-    "NEXTAUTH_URL": "https://to-do-v3.vercel.app"
+    "NEXTAUTH_URL": "https://to-do-v4.vercel.app"
   }
 } 

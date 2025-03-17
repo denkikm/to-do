@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
+const TodoSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: [true, 'عنوان تسک الزامی است'],
-    trim: true,
+    required: [true, 'لطفاً عنوان را وارد کنید'],
+    maxlength: [100, 'عنوان نمی‌تواند بیشتر از 100 کاراکتر باشد']
   },
   description: {
     type: String,
@@ -12,7 +12,7 @@ const todoSchema = new mongoose.Schema({
   },
   completed: {
     type: Boolean,
-    default: false,
+    default: false
   },
   dueDate: {
     type: Date
@@ -33,10 +33,16 @@ const todoSchema = new mongoose.Schema({
   },
   userId: {
     type: String,
-    required: true,
+    required: true
   },
-}, {
-  timestamps: true,
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
-export default mongoose.models.Todo || mongoose.model('Todo', todoSchema); 
+export default mongoose.models.Todo || mongoose.model('Todo', TodoSchema); 

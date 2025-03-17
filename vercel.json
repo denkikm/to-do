@@ -5,7 +5,7 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "env": {
-    "DATABASE_URL": "postgresql://postgres:aGKLvz3sb5snRD4J@db.qmnggrbmkqjoqjsmusyf.supabase.co:6543/postgres?pgbouncer=true",
+    "DATABASE_URL": "postgresql://postgres:aGKLvz3sb5snRD4J@db.qmnggrbmkqjoqjsmusyf.supabase.co:6543/postgres?pgbouncer=true&connection_limit=1&pool_timeout=20&sslmode=require",
     "NEXT_PUBLIC_SUPABASE_URL": "https://qmnggrbmkqjoqjsmusyf.supabase.co",
     "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbmdncmJta3Fqb3Fqc211c3lmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxOTk0OTcsImV4cCI6MjA1Nzc3NTQ5N30.g8rCZBq9N5lqQ67sp3ASQAleEtazevFbd0WPPsMPZq4",
     "NEXTAUTH_SECRET": "c8e3e306237b4c9ab324f99e86876e42",
